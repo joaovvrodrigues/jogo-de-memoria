@@ -1,0 +1,177 @@
+object Form1: TForm1
+  Left = 299
+  Height = 481
+  Top = 250
+  Width = 319
+  Caption = 'Jogo da Memória - Animais'
+  ClientHeight = 481
+  ClientWidth = 319
+  Color = clWindow
+  OnCreate = Inicio
+  OnPaint = VerificaVitoria
+  object BitBtn1: TBitBtn
+    Left = 8
+    Height = 90
+    Top = 8
+    Width = 90
+    OnClick = Clique
+    ParentFont = False
+    TabOrder = 0
+  end
+  object BitBtn2: TBitBtn
+    Left = 112
+    Height = 90
+    Top = 8
+    Width = 90
+    OnClick = Clique
+    TabOrder = 1
+  end
+  object BitBtn3: TBitBtn
+    Left = 216
+    Height = 90
+    Top = 8
+    Width = 90
+    OnClick = Clique
+    TabOrder = 2
+  end
+  object BitBtn4: TBitBtn
+    Left = 8
+    Height = 90
+    Top = 112
+    Width = 90
+    OnClick = Clique
+    TabOrder = 3
+  end
+  object BitBtn5: TBitBtn
+    Left = 112
+    Height = 90
+    Top = 112
+    Width = 90
+    OnClick = Clique
+    TabOrder = 4
+  end
+  object BitBtn6: TBitBtn
+    Left = 216
+    Height = 90
+    Top = 112
+    Width = 90
+    OnClick = Clique
+    TabOrder = 5
+  end
+  object BitBtn7: TBitBtn
+    Left = 8
+    Height = 90
+    Top = 216
+    Width = 90
+    OnClick = Clique
+    TabOrder = 6
+  end
+  object BitBtn8: TBitBtn
+    Left = 112
+    Height = 90
+    Top = 216
+    Width = 90
+    OnClick = Clique
+    TabOrder = 7
+  end
+  object BitBtn9: TBitBtn
+    Left = 216
+    Height = 90
+    Top = 216
+    Width = 90
+    OnClick = Clique
+    TabOrder = 8
+  end
+  object BitBtn10: TBitBtn
+    Left = 8
+    Height = 90
+    Top = 320
+    Width = 90
+    OnClick = Clique
+    TabOrder = 9
+  end
+  object BitBtn11: TBitBtn
+    Left = 112
+    Height = 90
+    Top = 320
+    Width = 90
+    OnClick = Clique
+    TabOrder = 10
+  end
+  object BitBtn12: TBitBtn
+    Left = 216
+    Height = 90
+    Top = 320
+    Width = 90
+    OnClick = Clique
+    TabOrder = 11
+  end
+  object Label1: TLabel
+    Left = 16
+    Height = 21
+    Top = 424
+    Width = 57
+    Caption = 'Tempo : '
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 80
+    Height = 21
+    Top = 424
+    Width = 9
+    Caption = '0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI Semibold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 184
+    Height = 21
+    Top = 424
+    Width = 68
+    Caption = 'Recorde : '
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 256
+    Height = 21
+    Top = 424
+    Width = 9
+    Caption = '0'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI Semibold'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    Left = 72
+    Top = 448
+  end
+end
