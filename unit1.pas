@@ -60,8 +60,8 @@ implementation
 { TForm1 }
 procedure TForm1.LimparImagens();
 begin
-  CartaVirada1.Glyph.Clear;
-  CartaVirada2.Glyph.Clear;
+  CartaVirada1.Glyph.LoadFromFile('imagens/limpo.bmp');
+  CartaVirada2.Glyph.LoadFromFile('imagens/limpo.bmp');
 end;
 
 procedure TForm1.Clique(Sender: TObject);
@@ -74,7 +74,7 @@ begin
     Exit;
 
   if Current.Caption = '' then
-    Current.Glyph.LoadFromFile('imagens/' + Current.Hint + ' (Personalizado).bmp');
+    Current.Glyph.LoadFromFile('imagens/' + Current.Hint + '.bmp');
 
   Viradas := Viradas + 1;
 
@@ -137,8 +137,8 @@ end;
 function TForm1.Gerador(): TAnArray;
 var
   i: integer;
-  animais: TAnArray = ('PORCO', 'PAPAGAIO', 'VACA', 'CACHORRO',
-    'GATO', 'ABELHA', 'PORCO', 'PAPAGAIO', 'VACA', 'CACHORRO', 'GATO', 'ABELHA');
+  animais: TAnArray = ('apolo', 'boris', 'charlie', 'floquinho',
+    'pingo', 'toto', 'apolo', 'boris', 'charlie', 'floquinho', 'pingo', 'toto');
   letrasRandom: TAnArray = ('.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.');
   Resultado: TAnArray = ('.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.');
 begin
@@ -159,6 +159,7 @@ procedure TForm1.Inicio(Sender: TObject);
 var
   Result: TAnArray;
 begin
+  Randomize;
   Label2.Caption := IntToStr(Counter);
   Result := Gerador();
   BitBtn1.hint := Result[0];
@@ -173,22 +174,24 @@ begin
   BitBtn10.hint := Result[9];
   BitBtn11.hint := Result[10];
   BitBtn12.hint := Result[11];
+
+  LimparTodasImagens();
 end;
 
 procedure TForm1.LimparTodasImagens();
 begin
-  BitBtn1.Glyph.Clear;
-  BitBtn2.Glyph.Clear;
-  BitBtn3.Glyph.Clear;
-  BitBtn4.Glyph.Clear;
-  BitBtn5.Glyph.Clear;
-  BitBtn6.Glyph.Clear;
-  BitBtn7.Glyph.Clear;
-  BitBtn8.Glyph.Clear;
-  BitBtn9.Glyph.Clear;
-  BitBtn10.Glyph.Clear;
-  BitBtn11.Glyph.Clear;
-  BitBtn12.Glyph.Clear;
+  BitBtn1.Glyph.LoadFromFile('imagens/limpo.bmp');
+  BitBtn2.Glyph.LoadFromFile('imagens/limpo.bmp');
+  BitBtn3.Glyph.LoadFromFile('imagens/limpo.bmp');
+  BitBtn4.Glyph.LoadFromFile('imagens/limpo.bmp');
+  BitBtn5.Glyph.LoadFromFile('imagens/limpo.bmp');
+  BitBtn6.Glyph.LoadFromFile('imagens/limpo.bmp');
+  BitBtn7.Glyph.LoadFromFile('imagens/limpo.bmp');
+  BitBtn8.Glyph.LoadFromFile('imagens/limpo.bmp');
+  BitBtn9.Glyph.LoadFromFile('imagens/limpo.bmp');
+  BitBtn10.Glyph.LoadFromFile('imagens/limpo.bmp');
+  BitBtn11.Glyph.LoadFromFile('imagens/limpo.bmp');
+  BitBtn12.Glyph.LoadFromFile('imagens/limpo.bmp');
 end;
 
 procedure TForm1.VerificaRecorde();
@@ -208,7 +211,7 @@ begin
     (BitBtn10.hint = 'OK') and (BitBtn11.hint = 'OK') and (BitBtn12.hint = 'OK') then
   begin
     Timer1.Enabled := False;
-    ShowMessage('Parabens! Você Venceu!');
+    ShowMessage('Parabens! Você Venceu! Mas lembre-se se quiser ter um cachorrinho, não compre, adote!');
     LimparTodasImagens();
     VerificaRecorde();
     Inicio(Form1);

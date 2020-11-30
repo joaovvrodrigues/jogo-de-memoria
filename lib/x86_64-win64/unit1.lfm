@@ -3,12 +3,13 @@ object Form1: TForm1
   Height = 481
   Top = 250
   Width = 319
-  Caption = 'Jogo da Memória - Animais'
+  Caption = 'Jogo da Memória - Cachorrinhos'
   ClientHeight = 481
   ClientWidth = 319
-  Color = clWindow
+  Color = clMoneyGreen
   OnCreate = Inicio
   OnPaint = VerificaVitoria
+  LCLVersion = '2.0.10.0'
   object BitBtn1: TBitBtn
     Left = 8
     Height = 90
