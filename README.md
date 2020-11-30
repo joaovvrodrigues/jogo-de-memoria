@@ -1,4 +1,4 @@
 # jogo-de-memoria-cachorrinhos
 
-<p align="center"><img src="https://i.imgur.com/1CCTIaM.png" title="Jogo da Memória" alt="Jogo da Memória">
+<p align="center"><img src="https://i.imgur.com/b8hoqNt.png" title="Jogo da Memória" alt="Jogo da Memória">
 </p>
